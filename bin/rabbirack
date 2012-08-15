@@ -34,9 +34,6 @@ config_ru_path = File.join(base_dir, "config.ru")
 parse = lambda do
   Rabbit::Console.parse!(ARGV) do |opts, options|
     options.rabbit_uri = "druby://localhost:10101"
-    options.filters = []
-    options.user_languages = []
-    options.log_status = false
 
     opts.banner += " [passenger|shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
 

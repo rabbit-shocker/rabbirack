@@ -35,6 +35,7 @@ parse = lambda do
   Rabbit::Console.parse!(ARGV) do |opts, options|
     options.rabbit_uri = "druby://localhost:10101"
     options.port = 10102
+    options.bonjour = false
 
     opts.banner += " [shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
 
@@ -56,12 +57,24 @@ parse = lambda do
             "Use ENVIRONMENT as Rack application environment.") do |environment|
       ENV["RACK_ENV"] = environment
     end
+
+    opts.on("--[no-]bonjour",
+            "Use service discovery for bonjour"),
+            "(#{options.bonjour})") do |bool|
+      options.bonjour = bool
+    end
   end
 end
 
 options, logger = parse.call
 
 ENV["RABBIT_URI"] = options.rabbit_uri
+
+if options.bonjour
+  require "easyjour"
+  jour_title = "Rabbit - #{rabbit.title}"
+  jour = Easyjour::Service.new(jour_title, "http", options.port)
+end
 
 rack_runner = ARGV.first
 case rack_runner

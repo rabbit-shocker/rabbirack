@@ -61,7 +61,6 @@ case rack_runner
 when "passenger"
   require 'phusion_passenger'
   require 'phusion_passenger/standalone/main'
-  ENV["HROONGA_PASSENGER_STANDALONE"] = "yes"
   ARGV.shift
   if ARGV[0] == "start"
     ARGV[1, 0] = ["--rackup", config_ru_path]

@@ -34,6 +34,7 @@ config_ru_path = File.join(base_dir, "config.ru")
 parse = lambda do
   Rabbit::Console.parse!(ARGV) do |opts, options|
     options.rabbit_uri = "druby://localhost:10101"
+    options.port = 10102
 
     opts.banner += " [passenger|shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
 
@@ -43,6 +44,12 @@ parse = lambda do
             "Rabbit's dRuby URI",
             "(#{options.rabbit_uri})") do |uri|
       options.rabbit_uri = uri
+    end
+
+    opts.on("--port=PORT", Integer,
+            "Use PORT as Web server port",
+            "(#{options.port})") do |port|
+      options.port = port
     end
 
     opts.on("-e", "--environment=ENVIRONMENT",
@@ -62,9 +69,11 @@ when "passenger"
   require 'phusion_passenger'
   require 'phusion_passenger/standalone/main'
   ARGV.shift
-  if ARGV[0] == "start"
-    ARGV[1, 0] = ["--rackup", config_ru_path]
+  unless ARGV[0] == "start"
+    ARGV.unshift("start")
   end
+  ARGV[1, 0] = ["--port", options.port.to_s]
+  ARGV[1, 0] = ["--rackup", config_ru_path]
   PhusionPassenger::Standalone::Main.run!(ARGV)
 when "shotgun"
   require "shotgun"
@@ -81,11 +90,13 @@ when "shotgun"
   shotgun_bin = File.join(shotgun_base_dir, "bin", "shotgun")
   ARGV.shift
   ARGV.unshift("--public", public_path)
+  ARGV.unshift("--port", options.port.to_s)
   ARGV << config_ru_path
   load shotgun_bin
 else
   require "rack"
   ARGV.shift if rack_runner == "rackup"
+  ARGV.unshift("--port", options.port.to_s)
   if Rack.release >= "1.3"
     ARGV.unshift("--option", "config=#{config_ru_path}")
   else

@@ -32,7 +32,7 @@ RubyGemsでインストールできます。関連パッケージも一緒にイ
   % rabbirack
   >> Thin web server (v1.3.1 codename Triple Espresso)
   >> Maximum connections set to 1024
-  >> Listening on 0.0.0.0:9292, CTRL+C to stop
+  >> Listening on 0.0.0.0:10102, CTRL+C to stop
 
 これでWebサーバーが起動しました。((%Ctrl+c%))（Controlキーを押しながら
 cを押す）まで起動しているので、発表が終わるまではこのままにしておきます。
@@ -43,7 +43,7 @@ Rabbitを起動します。
   % rabbit https://raw.github.com/shockers/rabbit/master/sample/theme-bench.rab
 
 Rabbitとrabbirackの両方を起動したらWebブラウザーで
-((<http://127.0.0.1:9292/>))へアクセスします。アクセスするとRabbitを操
+((<http://127.0.0.1:10102/>))へアクセスします。アクセスするとRabbitを操
 作するためのリンクがあります。これでRabbitを操作します。
 
 スライドを移動できましたか？

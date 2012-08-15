@@ -36,7 +36,7 @@ parse = lambda do
     options.rabbit_uri = "druby://localhost:10101"
     options.port = 10102
 
-    opts.banner += " [passenger|shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
+    opts.banner += " [shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
 
     opts.separator ""
 
@@ -65,16 +65,6 @@ ENV["RABBIT_URI"] = options.rabbit_uri
 
 rack_runner = ARGV.first
 case rack_runner
-when "passenger"
-  require 'phusion_passenger'
-  require 'phusion_passenger/standalone/main'
-  ARGV.shift
-  unless ARGV[0] == "start"
-    ARGV.unshift("start")
-  end
-  ARGV[1, 0] = ["--port", options.port.to_s]
-  ARGV[1, 0] = ["--rackup", config_ru_path]
-  PhusionPassenger::Standalone::Main.run!(ARGV)
 when "shotgun"
   require "shotgun"
   shotgun_rb = nil

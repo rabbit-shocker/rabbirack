@@ -19,7 +19,7 @@
 require "sinatra/base"
 require "haml"
 
-module Rabbirack
+module RabbiRack
   class Application < Sinatra::Base
     attr_accessor :rabbit
 

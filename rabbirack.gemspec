@@ -23,14 +23,14 @@ require "rabbirack/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rabbirack"
-  spec.version = Rabbirack::VERSION.dup
+  spec.version = RabbiRack::VERSION.dup
   spec.rubyforge_project = "rabbit"
   spec.homepage = "http://rabbit-shockers.org/en/rabbirack/"
   spec.authors = ["Kouhei Sutou"]
   spec.email = ["kou@cozmixng.org"]
-  spec.summary = "Rabbirack is a Web interface for Rabbit"
+  spec.summary = "RabbiRack is a Web interface for Rabbit"
   spec.description =
-    "Rabbirack provides Web interface for Rabbit. " +
+    "RabbiRack provides Web interface for Rabbit. " +
     "You can control your slide from your browser such as your smartphone. " +
     "It means that you can talk in front of audience " +
     "instead of in front of your computer."

@@ -36,7 +36,7 @@ use Rack::Lint
 use Rack::Head
 
 rabbit = DRbObject.new_with_uri(ENV["RABBIT_URI"])
-application = Rabbirack::Application.new do |app|
+application = RabbiRack::Application.new do |app|
   app.rabbit = rabbit
 end
 run application

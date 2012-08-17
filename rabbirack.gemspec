@@ -43,7 +43,7 @@ Gem::Specification.new do |spec|
     spec.executables = Dir.glob("*")
   end
 
-  spec.add_runtime_dependency("rabbit")
+  spec.add_runtime_dependency("rabbit", ">= 2.0.0")
   spec.add_runtime_dependency("sinatra")
   spec.add_runtime_dependency("haml")
 

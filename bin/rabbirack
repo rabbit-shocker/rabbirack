@@ -19,6 +19,8 @@
 
 require "rabbit/console"
 
+require "rabbirack/version"
+
 base_dir = nil
 $LOAD_PATH.each do |path|
   base_dir = File.join(path, "rabbirack")
@@ -33,6 +35,7 @@ config_ru_path = File.join(base_dir, "config.ru")
 
 parse = lambda do
   Rabbit::Console.parse!(ARGV) do |opts, options|
+    options.version = RabbiRack::VERSION
     options.rabbit_uri = options.druby_uri
     options.port = 10102
     options.bonjour = false

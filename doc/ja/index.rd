@@ -1,14 +1,14 @@
 ---
 layout: ja
-title: rabbirack
+title: RabbiRack
 ---
-== rabbirackとは
+== RabbiRackとは
 
-rabbirackはWebブラウザーからRabbitを操作するためのツールです。
+RabbiRackはWebブラウザーからRabbitを操作するためのツールです。
 
 次のスライドを表示するにはキーボードまたはマウスで操作しなければいけま
 せん。すると、発表中はずっとパソコンの前に立っていなければいけません。
-rabbirackを使うとWebブラウザーでRabbitを操作できるので、スマートフォン
+RabbiRackを使うとWebブラウザーでRabbitを操作できるので、スマートフォン
 からもRabbitを操作できるようになります。そうすると、もうパソコンの前に
 いる必要はありません。舞台の中央で発表することができます。
 
@@ -37,12 +37,12 @@ RubyGemsでインストールできます。関連パッケージも一緒にイ
 これでWebサーバーが起動しました。((%Ctrl+c%))（Controlキーを押しながら
 cを押す）まで起動しているので、発表が終わるまではこのままにしておきます。
 
-Rabbitとrabbirackはどちらを先に起動しても大丈夫です。以下のように
+RabbitとRabbiRackはどちらを先に起動しても大丈夫です。以下のように
 Rabbitを起動します。
 
   % rabbit https://raw.github.com/shockers/rabbit/master/sample/theme-bench.rab
 
-Rabbitとrabbirackの両方を起動したらWebブラウザーで
+RabbitとRabbiRackの両方を起動したらWebブラウザーで
 ((<http://127.0.0.1:10102/>))へアクセスします。アクセスするとRabbitを操
 作するためのリンクがあります。これでRabbitを操作します。
 
@@ -91,7 +91,7 @@ laterとすることに同意してもらったこととします。また、そ
 
 === リポジトリ
 
-rabbirackのリポジトリは((<GitHub|URL:https://github.com/shockers/rabbirack/>))にあります。
+RabbiRackのリポジトリは((<GitHub|URL:https://github.com/shockers/rabbirack/>))にあります。
 
 ((<Rabbitの開発ページユーザーページ
 |URL:http://rabbit-shockers.org/ja/users.html>))を参照してください。
@@ -118,7 +118,7 @@ rabbirackのリポジトリは((<GitHub|URL:https://github.com/shockers/rabbirac
 
 == 感謝
 
-以下の方々はrabbirackを助けてくれたみなさんです。ありがとうございま
+以下の方々はRabbiRackを助けてくれたみなさんです。ありがとうございま
 す！！！
 
   * ...

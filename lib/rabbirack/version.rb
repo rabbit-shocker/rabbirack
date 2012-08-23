@@ -15,5 +15,5 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 module RabbiRack
-  VERSION = "1.1.0"
+  VERSION = "2.0.0"
 end

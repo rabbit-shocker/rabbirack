@@ -37,36 +37,36 @@ public_path = File.join(base_dir, "public")
 config_ru_path = File.join(base_dir, "config.ru")
 
 parse = lambda do
-  Rabbit::Console.parse!(ARGV) do |opts, options|
+  Rabbit::Console.parse!(ARGV) do |parser, options|
     options.version = RabbiRack::VERSION
     options.rabbit_uri = options.druby_uri
     options.port = 10102
     options.bonjour = false
 
-    opts.banner += " [shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
+    parser.banner += " [shotgun|rackup] [-- [RACK_RUNNER_OPTIONS]]"
 
-    opts.separator ""
+    parser.separator ""
 
-    opts.on("--rabbit-uri=URI",
-            _("Rabbit's dRuby URI"),
-            "(#{options.rabbit_uri})") do |uri|
+    parser.on("--rabbit-uri=URI",
+              _("Rabbit's dRuby URI"),
+              "(#{options.rabbit_uri})") do |uri|
       options.rabbit_uri = uri
     end
 
-    opts.on("--port=PORT", Integer,
-            _("Use PORT as Web server port"),
-            "(#{options.port})") do |port|
+    parser.on("--port=PORT", Integer,
+              _("Use PORT as Web server port"),
+              "(#{options.port})") do |port|
       options.port = port
     end
 
-    opts.on("-e", "--environment=ENVIRONMENT",
-            _("Use ENVIRONMENT as Rack application environment.")) do |environment|
+    parser.on("-e", "--environment=ENVIRONMENT",
+              _("Use ENVIRONMENT as Rack application environment.")) do |environment|
       ENV["RACK_ENV"] = environment
     end
 
-    opts.on("--[no-]bonjour",
-            _("Use service discovery for bonjour"),
-            "(#{options.bonjour})") do |bool|
+    parser.on("--[no-]bonjour",
+              _("Use service discovery for bonjour"),
+              "(#{options.bonjour})") do |bool|
       options.bonjour = bool
     end
   end

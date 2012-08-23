@@ -18,6 +18,7 @@
 
 require "rubygems"
 require "bundler/gem_helper"
+require "gettext/task"
 
 base_dir = File.expand_path(File.dirname(__FILE__))
 

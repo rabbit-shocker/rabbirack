@@ -21,6 +21,8 @@ require "haml"
 
 module RabbiRack
   class Application < Sinatra::Base
+    include GetText
+
     attr_accessor :rabbit
 
     set :app_file, File.join(File.dirname(__FILE__), "config.ru")

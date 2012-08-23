@@ -1,6 +1,4 @@
-# -*- ruby -*-
-#
-# Copyright (C) 2012 Kouhei Sutou <kou@cozmixng.org>
+# Copyright (C) 2012  Kouhei Sutou <kou@cozmixng.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,20 +14,15 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-require "rubygems"
-require "bundler/gem_helper"
+module RabbiRack
+  module GetText
+    DOMAIN = "rabbirack"
 
-base_dir = File.expand_path(File.dirname(__FILE__))
-
-helper = Bundler::GemHelper.new(base_dir)
-def helper.version_tag
-  version
+    class << self
+      def included(mod)
+        mod.send(:include, ::GetText)
+        mod.bindtextdomain(DOMAIN)
+      end
+    end
+  end
 end
-
-helper.install
-spec = helper.gemspec
-
-GetText::Task.new(spec) do |task|
-end
-
-task :build => "gettext"

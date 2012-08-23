@@ -38,7 +38,9 @@ Gem::Specification.new do |spec|
 
   spec.files = ["Rakefile", "COPYING", "GPL", "README"]
   spec.files += ["Gemfile", "#{spec.name}.gemspec"]
-  spec.files += Dir.glob("{lib,po}/**/*")
+  spec.files += Dir.glob("lib/**/*.{rb,ru,css,haml}")
+  spec.files += Dir.glob("po/**/*.po")
+  spec.files += Dir.glob("locale/**/*.mo")
   Dir.chdir("bin") do
     spec.executables = Dir.glob("*")
   end
@@ -46,6 +48,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency("rabbit", ">= 2.0.0")
   spec.add_runtime_dependency("sinatra")
   spec.add_runtime_dependency("haml")
+  spec.add_runtime_dependency("locale", ">= 2.0.6")
 
   spec.add_development_dependency("rake")
   spec.add_development_dependency("bundler")

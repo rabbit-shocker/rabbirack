@@ -20,6 +20,9 @@
 require "rabbit/console"
 
 require "rabbirack/version"
+require "rabbirack/gettext"
+
+include RabbiRack::GetText
 
 base_dir = nil
 $LOAD_PATH.each do |path|
@@ -45,24 +48,24 @@ parse = lambda do
     opts.separator ""
 
     opts.on("--rabbit-uri=URI",
-            "Rabbit's dRuby URI",
+            _("Rabbit's dRuby URI"),
             "(#{options.rabbit_uri})") do |uri|
       options.rabbit_uri = uri
     end
 
     opts.on("--port=PORT", Integer,
-            "Use PORT as Web server port",
+            _("Use PORT as Web server port"),
             "(#{options.port})") do |port|
       options.port = port
     end
 
     opts.on("-e", "--environment=ENVIRONMENT",
-            "Use ENVIRONMENT as Rack application environment.") do |environment|
+            _("Use ENVIRONMENT as Rack application environment.")) do |environment|
       ENV["RACK_ENV"] = environment
     end
 
     opts.on("--[no-]bonjour",
-            "Use service discovery for bonjour"),
+            _("Use service discovery for bonjour"),
             "(#{options.bonjour})") do |bool|
       options.bonjour = bool
     end

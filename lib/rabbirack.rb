@@ -17,4 +17,5 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
 require "rabbirack/version"
+require "rabbirack/gettext"
 require "rabbirack/application"

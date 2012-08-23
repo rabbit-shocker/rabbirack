@@ -18,13 +18,17 @@
 
 require "drb/drb"
 
-require "rabbirack/application"
+require "locale"
+
+require "rabbirack"
 
 environment = ENV["RACK_ENV"] || "development"
 case environment
 when "development"
   use Rack::ShowExceptions
 end
+
+use Locale::Middleware
 
 use Rack::Runtime
 use Rack::ContentLength

@@ -2,12 +2,12 @@
   %li
     - if @rabbit.have_next?
       %a(href="/pages/next")
-        .navi 次へ
+        .navi=_("Next")
     - else
-      .navi 次へ
+      .navi=_("Next")
   %li
     - if @rabbit.have_previous?
       %a(href="/pages/previous")
-        .navi 前へ
+        .navi=_("Previous")
     - else
-      .navi 前へ
+      .navi=_("Previous")

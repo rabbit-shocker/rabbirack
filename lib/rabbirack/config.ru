@@ -18,7 +18,7 @@
 
 require "drb/drb"
 
-require "locale"
+require "locale/middleware"
 
 require "rabbirack"
 

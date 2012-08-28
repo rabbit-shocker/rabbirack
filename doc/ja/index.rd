@@ -43,7 +43,7 @@ Rabbitを起動します。
   % rabbit https://raw.github.com/shockers/rabbit/master/sample/theme-bench.rab
 
 RabbitとRabbiRackの両方を起動したらWebブラウザーで
-((<http://127.0.0.1:10102/>))へアクセスします。アクセスするとRabbitを操
+((<URL:http://127.0.0.1:10102/>))へアクセスします。アクセスするとRabbitを操
 作するためのリンクがあります。これでRabbitを操作します。
 
 スライドを移動できましたか？

@@ -6,7 +6,7 @@ title: RabbiRack
 
 RabbiRackはWebブラウザーからRabbitを操作するためのツールです。
 
-次のスライドを表示するにはキーボードまたはマウスで操作しなければいけま
+次のページを表示するにはキーボードまたはマウスで操作しなければいけま
 せん。すると、発表中はずっとパソコンの前に立っていなければいけません。
 RabbiRackを使うとWebブラウザーでRabbitを操作できるので、スマートフォン
 からもRabbitを操作できるようになります。そうすると、もうパソコンの前に
@@ -40,13 +40,13 @@ cを押す）まで起動しているので、発表が終わるまではこの�
 RabbitとRabbiRackはどちらを先に起動しても大丈夫です。以下のように
 Rabbitを起動します。
 
-  % rabbit https://raw.github.com/shockers/rabbit/master/sample/theme-bench.rab
+  % rabbit rabbit-theme-bench-ja.gem
 
 RabbitとRabbiRackの両方を起動したらWebブラウザーで
 ((<URL:http://127.0.0.1:10102/>))へアクセスします。アクセスするとRabbitを操
 作するためのリンクがあります。これでRabbitを操作します。
 
-スライドを移動できましたか？
+ページを移動できましたか？
 それでは発表の準備をしっかりして発表に備えてください。
 
 == より詳しい使い方
@@ -54,7 +54,7 @@ RabbitとRabbiRackの両方を起動したらWebブラウザーで
 通常はここまで説明した使い方で十分ですが、それでは足りないこともありま
 す。そのようなときのためにより詳しい使い方を説明します。
 
-=== 違うホストで起動しているRabbitにコメントを送る
+=== 違うホストで起動しているRabbitを操作する
 
 TODO
 
@@ -93,9 +93,6 @@ laterとすることに同意してもらったこととします。また、そ
 
 RabbiRackのリポジトリは((<GitHub|URL:https://github.com/shockers/rabbirack/>))にあります。
 
-((<Rabbitの開発ページユーザーページ
-|URL:http://rabbit-shockers.org/ja/users.html>))を参照してください。
-
 === コミットメール
 
 以下のメーリングリストにコミットメール毎に変更点が流れます。メーリング
@@ -110,9 +107,7 @@ RabbiRackのリポジトリは((<GitHub|URL:https://github.com/shockers/rabbirac
 
 === バグの報告方法
 
-ご意見ご要望不具合報告等は作者へのメール、メーリングリスト（メーリング
-リストについては((<Rabbitのユーザーページ
-|URL:http://rabbit-shockers.org/ja/users.html>))を参照してください）、
+ご意見ご要望不具合報告等は作者へのメール、メーリングリスト、
 ((<GitHubのIssues|URL:https://github.com/shockers/rabbirack/issues>))を
 ご利用ください。
 

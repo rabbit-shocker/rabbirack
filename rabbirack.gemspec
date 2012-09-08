@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.name = "rabbirack"
   spec.version = RabbiRack::VERSION.dup
   spec.rubyforge_project = "rabbit"
-  spec.homepage = "http://rabbit-shockers.org/en/rabbirack/"
+  spec.homepage = "http://rabbit-shocker.org/en/rabbirack/"
   spec.authors = ["Kouhei Sutou"]
   spec.email = ["kou@cozmixng.org"]
   spec.summary = "RabbiRack is a Web interface for Rabbit"

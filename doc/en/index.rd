@@ -86,14 +86,14 @@ rules when they contribute their patches, codes and so on.
 == Mailing list
 
 See ((<Rabbit's users page
-|URL:http://rabbit-shockers.org/en/users.html>)).
+|URL:http://rabbit-shocker.org/en/users.html>)).
 
 == Join development
 
 === Repository
 
 RabbiRack's repository is
-((<GitHub|URL:https://github.com/shockers/rabbirack/>)).
+((<GitHub|URL:https://github.com/rabbit-shocker/rabbirack/>)).
 
 === Commit mail
 
@@ -110,7 +110,7 @@ to the ML, send an e-mail like the following.
 === Bug report
 
 Use the mailing list or ((<Issues on
-GitHub|URL:https://github.com/shockers/rabbirack/issues>)) for
+GitHub|URL:https://github.com/rabbit-shocker/rabbirack/issues>)) for
 reporting a bug or a request.
 
 == Thanks
